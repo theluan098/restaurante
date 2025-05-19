@@ -1,7 +1,9 @@
 import sqlite3
 
+
 def conectar():
     return sqlite3.connect('restaurante.db')
+
 
 def criar_tabelas():
     con = conectar()
@@ -33,5 +35,27 @@ def criar_tabelas():
             FOREIGN KEY(mesa_id) REFERENCES mesas(id))
     ''')
 
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS adm (
+                   id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                   usuario TEXT,
+                   senha INTEGER
+        )
+    ''')
+
+    cursor.execute('''
+        INSERT INTO adm (usuario, senha) VALUES (?, ?)
+    ''', ('adm', '123'))
+
     con.commit()
     con.close()
+
+
+def verificar_login(usuario, senha):
+    conn = conectar()
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM adm WHERE usuario = ? AND senha = ?", (usuario, senha))
+    resultado = cursor.fetchone()
+    conn.close()
+    return resultado is not None
