@@ -9,7 +9,7 @@ from tkinter import filedialog, messagebox
 def exportar_csv(conteudo_frame=None):
     try:
         # Conectar ao banco de dados
-        conn = sqlite3.connect('restaurante/restaurante.db')
+        conn = sqlite3.connect('restaurante.db')
         cursor = conn.cursor()
 
         # Buscar todos os dados da tabela reservas

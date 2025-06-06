@@ -33,7 +33,7 @@ def iniciar_login():
     frame_esquerdo.grid_rowconfigure(0, weight=1)
     frame_esquerdo.grid_columnconfigure(0, weight=1)
 
-    imagem = Image.open("restaurante/views/img/logopng.png")
+    imagem = Image.open("views/img/logopng.png")
     imagem_resized = ctk.CTkImage(imagem, size=(500, 500))  # tamanho base
 
     imagem_label = ctk.CTkLabel(frame_esquerdo, image=imagem_resized, text="")

@@ -1,10 +1,11 @@
 import sqlite3
+from tkinter import messagebox
 
 # Função que conecta ao banco de dados
 
 
 def conectar():
-    return sqlite3.connect('restaurante/restaurante.db')
+    return sqlite3.connect('restaurante.db')
 
 # Função que salva um novo usuário administrador no banco, verificando se já existe
 
@@ -17,7 +18,7 @@ def salvar_usuario(usuario, senha):
         # Verifica se o usuário já está cadastrado
         cursor.execute("SELECT * FROM adm WHERE usuario = ?", (usuario,))
         if cursor.fetchone():
-            print("Usuário já existe.")
+            messagebox.showerror("Erro", "Usuário já existe.")
             return False
 
         # Insere o novo usuário na tabela

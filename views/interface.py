@@ -442,15 +442,15 @@ def janela_principal():
 
     # --- Lista com (texto do botão, função que será chamada) ---
     botoes_menu = [
-        ("Nova Reserva", abrir_nova_reserva, "restaurante/views/icons/add.png"),
-        ("Ver Reservas", abrir_reservas, "restaurante/views/icons/view.png"),
-        ("Editar Reserva", abrir_edicao, "restaurante/views/icons/edit.png"),
+        ("Nova Reserva", abrir_nova_reserva, "views/icons/add.png"),
+        ("Ver Reservas", abrir_reservas, "views/icons/view.png"),
+        ("Editar Reserva", abrir_edicao, "views/icons/edit.png"),
         ("Cancelar Reserva", abrir_cancelamento,
-         "restaurante/views/icons/cancel.png"),
+         "views/icons/cancel.png"),
         ("Gerenciar Clientes", abrir_gerenciar_clientes,
-         "restaurante/views/icons/group.png"),
+         "views/icons/group.png"),
         ("Exportar CSV", exportar_csv,
-         "restaurante/views/icons/csv.png"),
+         "views/icons/csv.png"),
     ]
 
     # Criar botões dinamicamente

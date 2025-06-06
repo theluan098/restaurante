@@ -4,7 +4,7 @@ import sqlite3
 
 
 def conectar():
-    return sqlite3.connect('restaurante/restaurante.db')
+    return sqlite3.connect('restaurante.db')
 
 # Função que cria todas as tabelas necessárias no banco de dados, caso ainda não existam
 
