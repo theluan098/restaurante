@@ -20,7 +20,6 @@ Este é um sistema desenvolvido em Python para o gerenciamento de reservas em um
 ## 📁 Estrutura do Projeto
 
 ```
-restaurante-att_carlos/
 ├── restaurante/
 │   ├── main.py                  # Arquivo principal para executar o sistema
 │   ├── restaurante.db           # Banco de dados SQLite
